@@ -1,0 +1,23 @@
+PROJECTILE
+
+A super simple project portfolio app for Django.
+
+INSTALLATION
+
+1. Add the projectile folder to your PYTHONPATH
+
+2. Add projectile to INSTALLED_APPS (see below)
+
+INSTALLED_APPS = (
+    # ...
+    'projectile',
+    # ...
+)
+
+3. Add the 'projectile.urls' to your urls.py (see below)
+
+urlpatterns = patterns('',
+    # ...
+    url(r'^projects/', include('projectile.urls')),
+    # ...
+)
