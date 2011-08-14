@@ -14,13 +14,8 @@ class ProjectAdmin(admin.ModelAdmin):
         ProjectImageInline,
     ]
 
-#class ProjectImageCategoryAdmin(admin.ModelAdmin):
-#    prepopulated_fields = {'slug': ('title',)}
-
 class ProjectImageAdmin(admin.ModelAdmin):
     pass
 
 admin.site.register(ProjectCategory, ProjectCategoryAdmin)
 admin.site.register(Project, ProjectAdmin)
-#admin.site.register(ProjectImageCategory, ProjectImageCategoryAdmin)
-#admin.site.register(ProjectImage, ProjectImageAdmin)
