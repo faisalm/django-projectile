@@ -2,10 +2,11 @@ from django.shortcuts import render_to_response, get_object_or_404
 from django.template import RequestContext
 
 from projectile.models import Project
-from simplepages.models import SimplePageCategory
 
 def index(request, template_name='front/index.html'):
+    # Show at most INT featured projects
     listed_featured = 8
+    # Show at most INT thumbnail projects
     listed_thumbs = 6
     try:
         qs_featured_projects = Project.objects.filter(is_featured=True, is_inactive=False, is_deleted=False).order_by('-priority')
